@@ -13,9 +13,7 @@ public class UserList {
         staticFileLocation("/static");
         List<User> users = new ArrayList<>();
         post("/users", (request, response) -> {
-            User user = new User();
-            user.setAge(request.queryParams("name"));
-            user.setAge(request.queryParams("age"));
+            User user = new User("no1", "12345", "jaeyeon","jaeyeon93@naver.com");
             users.add(user);
             Map<String, Object> model = new HashMap<>();
             model.put("users", users);
